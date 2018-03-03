@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- importamos unos estilos -->
+  <!-- TODO: link base.css -->
+
+
+
+  <script src="https://unpkg.com/react@15/dist/react.js"></script>
+  <script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+  <title>Grace Hooper</title>
+</head>
+
+<body>
+  <header>
+    <div id="cabecera"></div>
+
+
+  </header>
+
+  <!-- NUESTRO CONTAINER GENERAL -->
+  <div id="react-container" class="section">
+
+
+    <!--prueba de componente -->
+
+    <div id="root" class="row"></div>
+    <div id="ContainerParagraph" class="row"></div>
+    <div id="referencias"></div>
+
+  </div>
+  <!--REACT-->
+
+  <script type="text/babel">
+
+  /*PRIMER COMPONENTE*/
+const Article = props=>{
+ 
+ return (
+
+<div>
+  <h1 className="center-align">{props.title}</h1>
+   
+  <img  className="grace col s12 m2 offset-m5 l2 offset-l5" src={props.image} alt=""/>
+  
+</div>)
+
+}
+
+ReactDOM.render(
+ <Article image ="https://www.agnesscott.edu/lriddle/women/hooper.jpg"  title=" Grace Hooper"/>,document.getElementById('root')
+);
+
+/*SEGUNDO COMPONENTE*/
+
+const Paragraph= props=>{
+  return (
+
+  <p className=" justify col m12 s12 l12 ">{props.parrafo} </p>
+
+)
+
+}
+ReactDOM.render(
+<div class="col s12 m12 l12">
+ <Paragraph parrafo="Grace Brewster Murray Hopper nació en la ciudad de Nueva York el 9 de diciembre de 1906,
+  hija de Walter Fletcher Murray y Mary Campbell Horne Murray. La mayor de tres hijos, ella era intensamente
+   curiosa a una edad temprana. Incluso a los siete años, mostró un amor particular por los artilugios,
+    desarmando siete relojes de alarma en un intento por determinar cómo funcionaban. Los padres de Hopper
+     proporcionaron una base sólida para su curiosidad. Compartió su amor por las matemáticas con su madre,
+      que estudió geometría por arreglos especiales cuando el estudio serio de las matemáticas todavía se consideraba
+       inapropiado para una mujer. Su padre, un corredor de seguros exitoso a pesar de la doble amputación de sus piernas, 
+       alentó a todos sus hijos, a través de su discurso y ejemplo, que podrían hacer cualquier cosa si se lo proponían."/>
+ <Paragraph parrafo="En 1923, a los 16 años, Hopper se postuló en Vassar College. Sin embargo, no aprobó un examen de latín y Vassar le
+  dijo que debía esperar un año. Sin desanimarse, se convirtió en una estudiante de internado en la escuela Hartridge en Nueva Jersey, ingresando
+   a Vassar al año siguiente. Se graduó Phi Beta Kappa de Vassar en 1928, con una Licenciatura en Matemáticas y Física. "/>
+ <Paragraph parrafo="Con el estallido de la Segunda Guerra Mundial, Hopper tomó la decisión de ayudar a su país al unirse a la Marina. El proceso no fue fácil. A los 34 años, con un peso de 105 libras, se la consideró excedentaria y con bajo peso para el alistamiento militar. Además, su posición como profesora de matemáticas fue declarada crucial para el esfuerzo de guerra. Los oficiales de la Marina le pidieron que permaneciera como civil. Estos obstáculos no detuvieron a Grace Hopper. Obtuvo una exención para el requisito de peso, un permiso especial del gobierno y un permiso de ausencia de Vassar College. En diciembre de 1943, fue jurada en la Reserva Naval de los EE. UU. Luego se capacitó en Midshipman's School for Women, graduándose primero en su clase."/>
+ <Paragraph parrafo="La primera asignación de Hopper fue bajo el Comandante Howard Aiken en la Oficina de Computación de Ordenanzas de la Universidad de Harvard.
+  Allí se convirtió en la tercera programadora de Mark I, la primera computadora digital en secuencia automática a gran escala del mundo. 
+  La computadora se usó para calcular ángulos de apuntamiento para armas Navales en condiciones climáticas variables.
+   Debido a que los números eran tan pertinentes, Hopper y sus asistentes a menudo debían correr y monitorear el sistema las veinticuatro horas 
+   del día. Pasaron innumerables horas transcribiendo e ingresando códigos para Mark I y sus sucesores, Mark II y III. Hopper recibió el premio 
+   Naval Ordnance Development Award en 1946 por su trabajo en la serie Mark."/>
+ <Paragraph parrafo="Durante su trabajo con Mark II, a Hopper se le atribuyó la acuñación del término error en referencia a un problema técnico en
+  la maquinaria. Sin embargo, esta historia es aparentemente un poco de folklore de computación, ya que el término ya había sido utilizado 
+  por el personal de Harvard durante varios años para describir problemas con sus computadoras. Es el caso de que ella y su equipo de programadores 
+  encontraron una polilla que voló a través de una ventana abierta y en uno de los relés de Mark II, apagando temporalmente el sistema. La polilla se
+   eliminó y se pegó en un libro de registro [ Foto de ese error]. En ese momento, el uso de la palabra error se refería a problemas con
+    el hardware. A mediados de la década de 1950, Hopper extendió el significado del término depuración para incluir la eliminación de errores de programación."/>
+ <Paragraph parrafo="La perseverancia y el estilo poco convencional de la almirante Hopper la llevaron a grandes logros en todos sus esfuerzos profesionales. Sin olvidar el ejemplo de su padre, ella asumió el sistema establecido y ganó. Una verdadera pionera, ayudó a allanar el camino para la informática moderna, así como para las mujeres profesionales de todo el mundo. Hopper realmente estuvo a la altura de su lema Dare and Do."/>
+ <Paragraph parrafo=""/>
+</div> ,document.getElementById('ContainerParagraph')
+ 
+);
+
+/* TERCER COMPONENET*/
+const Component = props=>{
+ 
+ return (
+
+
+  <li id="reference" className=" listReferencias">{props.lista}</li>
+    
+
+)
+
+}
+
+ReactDOM.render(
+  <ul> REFERENCIAS
+ <Component lista =" 1.-Kalemaris, Agnes M. Grace Murray Hopper, matemático, DA Disertación, Adelphia University, 2000." />
+ <Component lista =" 2.-Kidwell, Peggy Aldrich. Acecho del error informático difícil de alcanzar, IEEE Anales de la historia de la informática, 20: 4 (1998), 5-9." />
+ <Component lista =" 3.-Koch, Laura Coffin. Grace Brewster Murray Hopper- Mujeres notables en matemáticas- un diccionario biográfico- Charlene Morrow y Teri Perl- Editores Greenwood Press-1998 " />
+ </ul>
+ ,document.getElementById('referencias')
+);
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+
+</html>
